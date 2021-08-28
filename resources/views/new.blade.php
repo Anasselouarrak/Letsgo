@@ -22,11 +22,11 @@
 <div style="margin-left: 50px; " ><table style="width: 780px;">
     <td valign="top" style="width: 775px; ">
           <div  class="single-testimonial-box" style="width: 770px;background-color:  rgb(245,245,205); padding-top: 0px; padding-bottom: 0px; border-radius: 10px; " > <!--      padding: 20px 0px;   --->
-            <h2 style="text-align: center; color: #F9BD3B;">Nouveau trajet</h2>
+            <h2 style="text-align: center; color: #00b6e4;">Nouveau trajet</h2>
               <div style="width: 780px;" >
                
                 <div class="single-explore-txt bg-theme-1  " style="background-color:  rgb(255,255,255);">
-                 <a  style="color: #F9BD3B; font-size: 13px; padding-right: 70px;  float: right;">( * : &nbsp; Champs obligatoires)</a> <br/> <table><tr> <td style="width: 375px;"> <a style="color: #F9BD3B;">Départ : &nbsp; *</a> </td>
+                 <a  style="color: #00b6e4; font-size: 13px; padding-right: 70px;  float: right;">( * : &nbsp; Champs obligatoires)</a> <br/> <table><tr> <td style="width: 375px;"> <a style="color: #00b6e4;">Départ : &nbsp; *</a> </td>
 <td style="width: 375px;">
 <div class="field">
                                     <select style="border-width: 2px; border-radius: 4px;width: 314px; height: 40px; " id="destination" name="depart"><option value="">De</option>
@@ -52,7 +52,7 @@ foreach($villes as $data)
                                 </div><br/>
 </td>
 </tr><tr >
-   <td style="width: 375px;">              <a style="color: #F9BD3B;">   Destination : &nbsp; *</a> </td>
+   <td style="width: 375px;">              <a style="color: #00b6e4;">   Destination : &nbsp; *</a> </td>
  <td style="width: 375px;">
 
 <div class="field">
@@ -81,7 +81,7 @@ foreach($villes as $data)
 </tr>
 <tr>
   <td>
-   <a style="color: #F9BD3B;">  places disponibles : &nbsp; * </a> </td><td>
+   <a style="color: #00b6e4;">  places disponibles : &nbsp; * </a> </td><td>
 
 <div class="field">
                                     <select style="border-width: 2px; border-radius: 4px;width: 100px; height: 40px; " id="destination" name="nbr">
@@ -111,7 +111,7 @@ foreach($nbr as $data)
 </tr>
 <tr>
   <td>
-   <a style="color: #F9BD3B;">  L'heure de départ : &nbsp; * </a> </td><td><div class="field">
+   <a style="color: #00b6e4;">  L'heure de départ : &nbsp; * </a> </td><td><div class="field">
                                     <input name="heure" type="text" placeholder="Heure" style="width: 314px; " class="datepicker"value="{{ old('heure') }}">
 @if ($errors->has('heure'))
    <span style="color: red;" > {{ $errors->first('heure') }}</span>
@@ -123,7 +123,7 @@ foreach($nbr as $data)
 </tr>
 <tr>
   <td valign="top">
-   <a style="color: #F9BD3B; ">  Le : &nbsp; * </a> </td><td><div class="field">
+   <a style="color: #00b6e4; ">  Le : &nbsp; * </a> </td><td><div class="field">
                                     <input name="date" type="text" placeholder="Date" class=" checkin_date datepicker" style="width: 314px; " value="{{ old('date') }}">
 
 @if ($errors->has('date'))
@@ -142,7 +142,7 @@ foreach($nbr as $data)
 </tr>
 <tr>
   <td>
-   <a style="color: #F9BD3B;">
+   <a style="color: #00b6e4;">
 Prix : &nbsp; * </a> </td><td>
                      <div class="field">
                                     <input name="min" type="text" placeholder="Min" class="datepicker" style="width: 100px; " value="{{ old('min') }}"> MAD - <input name="max" type="text" placeholder="Max" class="datepicker" style="width: 100px; "value="{{ old('max') }}"> MAD
@@ -157,7 +157,7 @@ Prix : &nbsp; * </a> </td><td>
 
 <tr>
   <td>
-   <a style="color: #F9BD3B;">
+   <a style="color: #00b6e4;">
 Description / Instructions </a> </td><td>
                      <div class="field">
                                     

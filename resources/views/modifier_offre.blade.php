@@ -69,41 +69,41 @@ $m=$heure[1];
     $owner=Auth::id();
 
     ///////////////////old : changements à resaisir en cas d'erreur /////////
-    if (old('lun')=='lun') {//////////////////////////////////////bug : cas où l'utilisateur a decocher une case remplie de la bd elle revient ( on ne peut pas differencier entre old() decochee et old() d'une page nouvelle les deux sont =='')
-      $lun=1;
-    }else if (Storage::get('modifier_offre_first')==2) {
-      $lun=0;
-    }
-    if (old('mar')=='mar') {
-      $mar=1;
-    }else if (Storage::get('modifier_offre_first')==2) {
-      $mar=0;
-    }
-    if (old('mer')=='mer') {
-      $mer=1;
-    }else if (Storage::get('modifier_offre_first')==2) {
-      $mer=0;
-    }
-    if (old('jeu')=='jeu') {
-      $jeu=1;
-    }else if (Storage::get('modifier_offre_first')==2) {
-      $jeu=0;
-    }
-    if (old('ven')=='ven') {
-      $ven=1;
-    }else if (Storage::get('modifier_offre_first')==2) {
-      $ven=0;
-    }
-    if (old('sam')=='sam') {
-      $sam=1;
-    }else if (Storage::get('modifier_offre_first')==2) {
-      $sam=0;
-    }
-    if (old('dim')=='dim') {
-      $dim=1;
-    }else if (Storage::get('modifier_offre_first')==2) {
-      $dim=0;
-    }
+    // if (old('lun')=='lun') {//////////////////////////////////////bug : cas où l'utilisateur a decocher une case remplie de la bd elle revient ( on ne peut pas differencier entre old() decochee et old() d'une page nouvelle les deux sont =='')
+    //   $lun=1;
+    // }else if (Storage::get('modifier_offre_first')==2) {
+    //   $lun=0;
+    // }
+    // if (old('mar')=='mar') {
+    //   $mar=1;
+    // }else if (Storage::get('modifier_offre_first')==2) {
+    //   $mar=0;
+    // }
+    // if (old('mer')=='mer') {
+    //   $mer=1;
+    // }else if (Storage::get('modifier_offre_first')==2) {
+    //   $mer=0;
+    // }
+    // if (old('jeu')=='jeu') {
+    //   $jeu=1;
+    // }else if (Storage::get('modifier_offre_first')==2) {
+    //   $jeu=0;
+    // }
+    // if (old('ven')=='ven') {
+    //   $ven=1;
+    // }else if (Storage::get('modifier_offre_first')==2) {
+    //   $ven=0;
+    // }
+    // if (old('sam')=='sam') {
+    //   $sam=1;
+    // }else if (Storage::get('modifier_offre_first')==2) {
+    //   $sam=0;
+    // }
+    // if (old('dim')=='dim') {
+    //   $dim=1;
+    // }else if (Storage::get('modifier_offre_first')==2) {
+    //   $dim=0;
+    // }
       if((old('depart')!=$trajet->depart)&&(old('depart')!=""))
         $trajet->depart=old('depart');
       if((old('destination')!=$trajet->destination)&&(old('destination')!=""))
@@ -129,11 +129,11 @@ $m=$heure[1];
 <div style="margin-left: 50px; " ><table style="width: 780px;">
     <td valign="top" style="width: 775px; ">
           <div  class="single-testimonial-box" style="width: 770px;background-color:  rgb(245,245,205); padding-top: 0px; padding-bottom: 0px; border-radius: 10px; " > <!--      padding: 20px 0px;   --->
-            <h2 style="text-align: center; color: #F9BD3B;">Modifier trajet</h2>
+            <h2 style="text-align: center; color: #00b6e4 !important;" class="text-primary">Modifier trajet</h2>
               <div style="width: 780px;" >
                
                 <div class="single-explore-txt bg-theme-1  " style="background-color:  rgb(255,255,255);">
-                 <a  style="color: #F9BD3B; font-size: 13px; padding-right: 70px;  float: right;">( * : &nbsp; Champs obligatoires)</a> <br/> <table><tr> <td style="width: 375px;"> <a style="color: #F9BD3B;">Départ : &nbsp; *</a> </td>
+                 <a  style="color: #00b6e4; font-size: 13px; padding-right: 70px;  float: right;">( * : &nbsp; Champs obligatoires)</a> <br/> <table><tr> <td style="width: 375px;"> <a style="color: #00b6e4;">Départ : &nbsp; *</a> </td>
 <td style="width: 375px;">
 <div class="field">
                                     <select style="border-width: 2px; border-radius: 4px;width: 314px; height: 40px; " id="depart" name="depart"  onchange="EnregistrerON();"><option value="">De</option>
@@ -159,7 +159,7 @@ foreach($villes as $data)
                                 </div><br/>
 </td>
 </tr><tr >
-   <td style="width: 375px;">              <a style="color: #F9BD3B;">   Destination : &nbsp; *</a> </td>
+   <td style="width: 375px;">              <a style="color: #00b6e4;">   Destination : &nbsp; *</a> </td>
  <td style="width: 375px;">
 
 <div class="field">
@@ -188,7 +188,7 @@ foreach($villes as $data)
 </tr>
 <tr>
   <td>
-   <a style="color: #F9BD3B;">  places disponibles : &nbsp; * </a> </td><td>
+   <a style="color: #00b6e4;">  places disponibles : &nbsp; * </a> </td><td>
 
 <div class="field">
                                     <select style="border-width: 2px; border-radius: 4px;width: 100px; height: 40px; " id="nbr" name="nbr"  onchange="EnregistrerON();">
@@ -218,7 +218,7 @@ foreach($nbr as $data)
 </tr>
 <tr>
   <td>
-   <a style="color: #F9BD3B;">  L'heure de départ : &nbsp; * </a> </td><td><div class="field">
+   <a style="color: #00b6e4;">  L'heure de départ : &nbsp; * </a> </td><td><div class="field">
                                     <input name="heure" id="heure" type="text" placeholder="Heure" style="width: 314px; " class="datepicker"value="{{ $h}}:{{$m }}"  onchange="EnregistrerON();">
 @if ($errors->has('heure'))
    <span style="color: red;" > {{ $errors->first('heure') }}</span>
@@ -230,7 +230,7 @@ foreach($nbr as $data)
 </tr>
 <tr>
   <td valign="top">
-   <a style="color: #F9BD3B; ">  Le : &nbsp; * </a> </td><td><div class="field">
+   <a style="color: #00b6e4; ">  Le : &nbsp; * </a> </td><td><div class="field">
                                     <input name="date" id="date" type="text" placeholder="Date" class=" checkin_date datepicker" style="width: 314px; " value="{{ $date }}"  onchange="EnregistrerON();">
 
 @if ($errors->has('date'))
@@ -249,7 +249,7 @@ foreach($nbr as $data)
 </tr>
 <tr>
   <td>
-   <a style="color: #F9BD3B;">
+   <a style="color: #00b6e4;">
 Prix : &nbsp; * </a> </td><td>
                      <div class="field">
                                     <input name="min" type="text" placeholder="Min" class="datepicker" style="width: 100px; " value="{{ $min }}"  onchange="EnregistrerON();"> MAD - <input name="max" type="text" placeholder="Max" class="datepicker" style="width: 100px; "value="{{ $max }}"  onchange="EnregistrerON();"> MAD
@@ -264,7 +264,7 @@ Prix : &nbsp; * </a> </td><td>
 
 <tr>
   <td>
-   <a style="color: #F9BD3B;">
+   <a style="color: #00b6e4;">
 Description / Instructions </a> </td><td>
                      <div class="field">
                                     
@@ -297,7 +297,7 @@ Description / Instructions </a> </td><td>
  </form>
 
 
-<!--
+
 <script type="text/javascript">
   var data = new Array(13);
   var name = new Array(13);
@@ -311,7 +311,7 @@ Description / Instructions </a> </td><td>
   name[1]=depart;
   name[2]=destinationd;
 
- /*
+ 
   e[3] = document.getElementById("nbr");
   data[3] = e[3].options[e[3].selectedIndex].value;
   e[4] = document.getElementById("heure");
@@ -332,9 +332,9 @@ Description / Instructions </a> </td><td>
   data[11] = e[11].options[e[11].selectedIndex].value;
   e[12] = document.getElementById("dim");
   data[12] = e[12].options[e[12].selectedIndex].value;
- */
+ 
 </script>
--->
+
 
 <script type="text/javascript">
 

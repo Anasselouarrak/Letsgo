@@ -7638,20 +7638,20 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #f9be37 !important;
-    border: 1px solid #f9be37 !important;
+    background: #37abf9  !important;
+    border: 1px solid #37abf9  !important;
     color: #fff !important; }
     .btn.btn-primary:hover {
-      border: 1px solid #f9be37;
+      border: 1px solid #37abf9 ;
       background: transparent;
-      color: #f9be37; }
+      color: #37abf9 ; }
     .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #f9be37;
+      border: 1px solid #37abf9 ;
       background: transparent;
-      color: #f9be37; }
+      color: #37abf9 ; }
       .btn.btn-primary.btn-outline-primary:hover {
         border: 1px solid transparent;
-        background: #f9be37;
+        background: #37abf9 ;
         color: #fff; }
   .btn.btn-outline-white {
     border-color: rgba(255, 255, 255, 0.8);

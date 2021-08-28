@@ -73,13 +73,13 @@ $m=$heure[1];
     $img=$owner[0]->photo;
     $nom=$owner[0]->nom;
     
-   echo '
+    echo '
 <div   class="single-testimonial-box" style="width: 400px; "style="background-color:white;" > <!--      padding: 20px 0px;   --->
             <div  class=" col-md-4 col-sm-6" style="padding-left: 5px;">
               <div style="width: 400px;" >
                
                 <div class="single-explore-txt bg-theme-1  " style="padding-left: 0px;padding-right: 0px;">
-                  <h2 style="margin-bottom: 0px;height:85px;"><a  style="color: #F9BD3B;"><table> <td style="width: 300px;padding-left:15px;" valign="top"> Départ:'.$depart.' <br/> Destination:'.$destination.'</td><td style="width: 300px; text-align: right; padding-right:20px;">'.$date.' <br/> A: '.$h.'h'.$m.'  </td></table></a></h2>
+                  <h2 style="margin-bottom: 0px;height:85px;"><a  style="color: #00b6e4;"><table> <td style="width: 300px;padding-left:15px;" valign="top"> Départ:'.$depart.' <br/> Destination:'.$destination.'</td><td style="width: 300px; text-align: right; padding-right:20px;">'.$date.' <br/> A: '.$h.'h'.$m.'  </td></table></a></h2>
                   <p class="explore-rating-price"><table> <td style="width: 300px;padding-left:15px;">
                      <div class="explore-person-img" style="width: 100px;height: 100px; text-align: center;">
                           <a href="#" style="clip-path: circle(30px at center);">
@@ -89,7 +89,7 @@ $m=$heure[1];
                         </div>
                      </td><td style="width: 300px; text-align: right;padding-right:20px;">
                     <span class="explore-rating"style="margin-right: 70px;" >'.$nbr.'</span><br/>
-                    <a href="#" style="color: #F9BD3B;"> places disponibles</a> <br/>
+                    <a href="#" style="color: #00b6e4;"> places disponibles</a> <br/>
                       Prix
                       <span class="explore-price">'.$marge[0].'MAD-'.$marge[1].'MAD</span>
                     </td>
@@ -109,14 +109,14 @@ $m=$heure[1];
    ?>
 	<!-- Storage::put('chap_num', '1'); Storage::get('cour_id');-->
 	<br/><br/><br/>
-<div style="background-image: url('images/back.jpg'); background-size: 50%" >
+<section style="background-image: url('images/back.jpg'); background-repeat:no-repeat;  background-size: cover;height:850px" >
 	<div style="margin-left: 40px;">
 <?php
 
 
   /////////////////////////from to where////////////////////////////////////////
 	$str=Storage::get('depart');
-	if ($str=="depart") {
+	if ($str=='depart') {
 		echo '<div style="margin-left: 400px; font-weight: bold; font-size:40px;font-family:all; "> Liste complète des trajets</div>';//echo Storage::get('depart');
     echo'
     <br/><br/><br/><br/><br/><br/><br/>
@@ -415,12 +415,12 @@ $villes=explode(" -> ", $trajet);
           }else if(($villes[0]!='')&&($villes[1]!='')){
             if($date_re!="")
     $trajets =DB::select('select * from trajets INNER JOIN dates ON trajets.id = dates.id where depart=? and destination=? and ( dates.date_unique >= ? or dates.unique = \'0\') and id_user != ? order by dates.date_unique,dates.heure',[$villes[0],$villes[1],$date_re,$user->id]);
+    
   else
     {$today=date("Y-m-d");
     $trajets =DB::select('select * from trajets INNER JOIN dates ON trajets.id = dates.id where depart=? and destination=? and ( dates.date_unique >= ? or dates.unique = \'0\') and id_user != ? order by dates.date_unique,dates.heure',[$villes[0],$villes[1],$today,$user->id]);}
 
-/*
-            $trajets =DB::select('select * from trajets INNER JOIN dates ON trajets.id = dates.id where depart=? and destination=? order by dates.date_unique,dates.heure',[$villes[0],$villes[1]]);*/
+            $trajets =DB::select('select * from trajets INNER JOIN dates ON trajets.id = dates.id where depart=? and destination=? order by dates.date_unique,dates.heure',[$villes[0],$villes[1]]);
     foreach ($trajets as $key ) { 
       afficher($key->id,$key->depart,$key->destination,$key->id_date,$key->places,$key->id_user,$key->prix);
       }
@@ -544,5 +544,6 @@ $villes=explode(" -> ", $trajet);
 </div> <!-- echo '<div>'; -->
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-</div></div>
+</section>
+
 @endsection

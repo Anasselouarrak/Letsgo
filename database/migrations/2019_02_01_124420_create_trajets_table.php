@@ -25,6 +25,7 @@ class CreateTrajetsTable extends Migration
             $table->integer('id_vehicule')->nullable();
             $table->integer('id_date');
             $table->timestamps();
+            
         });
     }
 
